@@ -81,7 +81,7 @@ const VALUES = [
 
 /* ---------- FACILITY GALLERY ---------- */
 const GALLERY = [
-  { image: "https://picsum.photos/seed/jnl-gallery-1/700/500", caption: "Grooming station" },
+  { image: "web.png", caption: "Grooming station" },
   { image: "https://picsum.photos/seed/jnl-gallery-2/700/500", caption: "Cage-free boarding room" },
   { image: "https://picsum.photos/seed/jnl-gallery-3/700/500", caption: "Outdoor play yard" },
   { image: "https://picsum.photos/seed/jnl-gallery-4/700/500", caption: "Training studio" },
