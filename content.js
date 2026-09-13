@@ -24,7 +24,7 @@ const SERVICES = [
     priceFrom: "RM 60",
     duration: "45\u201390 min",
     includes: ["Bath & blow-dry", "Nail trim & ear clean", "Breed-specific or custom cut", "De-shedding treatment (add-on)"],
-    image: "https://picsum.photos/seed/jnl-grooming/1000/750",
+    image: "web.png",
   },
   {
     id: "boarding",
