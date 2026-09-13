@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JnL Pet Studio — Grooming, Boarding & Training</title>
+<meta name="description" content="JnL Pet Studio: fear-free grooming, cage-free boarding and positive-reinforcement training for dogs and cats.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#home" class="logo" data-nav="home">JnL<span class="logo-dot">.</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-nav="home" class="nav-link">Home</a>
+      <a href="#about" data-nav="about" class="nav-link">About</a>
+      <a href="#contact" data-nav="contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-primary btn-small" data-nav="contact" data-scroll-to="enquiryForm">Book a service</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ============ HOME ============ -->
+  <section class="page" id="page-home" data-page="home">
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow" id="heroTagline"></p>
+        <h1 class="hero-title">Care your pet<br>actually looks forward to.</h1>
+        <p class="hero-sub" id="heroIntro"></p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-nav="contact" data-scroll-to="enquiryForm">Book a service</button>
+          <a href="#" class="btn btn-ghost" data-scroll-to="servicesSection" data-nav="home">See services</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://picsum.photos/seed/jnl-hero-main/1000/1200" alt="A dog being groomed at JnL Pet Studio">
+      </div>
+    </section>
+
+    <section class="section" id="servicesSection">
+      <div class="section-head">
+        <p class="eyebrow">What we offer</p>
+        <h2>Three services, one calm space</h2>
+      </div>
+      <div class="service-rows" id="serviceRows"></div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="section-head">
+        <p class="eyebrow">Why JnL</p>
+        <h2>Small on purpose</h2>
+      </div>
+      <div class="feature-grid" id="featureGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">From pet parents</p>
+        <h2>What people say</h2>
+      </div>
+      <div class="testimonial-grid" id="testimonialGrid"></div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="section-head">
+        <p class="eyebrow">Take a look inside</p>
+        <h2>The studio</h2>
+      </div>
+      <div class="gallery-grid" id="homeGalleryGrid"></div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-band-inner">
+        <h2>Come by for a free meet &amp; greet</h2>
+        <p>No obligation — bring your pet in to see the space before booking anything.</p>
+        <button class="btn btn-primary btn-light" data-nav="contact" data-scroll-to="enquiryForm">Book a visit</button>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- ============ SERVICE DETAIL MODAL ============ -->
+  <div class="modal-overlay" id="serviceModalOverlay">
+    <div class="modal" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
+      <button class="modal-close" id="serviceModalClose" aria-label="Close">&times;</button>
+      <div id="serviceModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="page" id="page-about" data-page="about">
+    <div class="page-hero">
+      <p class="eyebrow">About us</p>
+      <h1>The studio behind the name</h1>
+    </div>
+
+    <section class="section about-intro">
+      <p class="about-lead" id="aboutIntro"></p>
+    </section>
+
+    <section class="section section-tint">
+      <div class="section-head">
+        <p class="eyebrow">What we believe</p>
+        <h2>Our values</h2>
+      </div>
+      <div class="values-grid" id="valuesGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Meet the team</p>
+        <h2>Who's looking after your pet</h2>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="section-head">
+        <p class="eyebrow">Around the studio</p>
+        <h2>Facility gallery</h2>
+      </div>
+      <div class="gallery-grid" id="aboutGalleryGrid"></div>
+    </section>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="page" id="page-contact" data-page="contact">
+    <div class="page-hero">
+      <p class="eyebrow">Get in touch</p>
+      <h1>Book a service or ask a question</h1>
+    </div>
+
+    <section class="section contact-wrap">
+      <div class="contact-info">
+        <ul class="contact-details" id="contactDetails"></ul>
+        <div>
+          <h3 class="hours-heading">Hours</h3>
+          <ul class="hours-list" id="hoursList"></ul>
+        </div>
+        <div class="contact-socials" id="contactSocials"></div>
+      </div>
+
+      <form class="contact-form" id="enquiryForm" novalidate>
+        <h3>Enquiry form</h3>
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="cfName">Your name</label>
+            <input type="text" id="cfName" name="name" required>
+            <span class="field-error" id="cfNameError"></span>
+          </div>
+          <div class="form-row">
+            <label for="cfEmail">Email</label>
+            <input type="email" id="cfEmail" name="email" required>
+            <span class="field-error" id="cfEmailError"></span>
+          </div>
+          <div class="form-row">
+            <label for="cfPhone">Phone</label>
+            <input type="tel" id="cfPhone" name="phone" required>
+            <span class="field-error" id="cfPhoneError"></span>
+          </div>
+          <div class="form-row">
+            <label for="cfPetType">Pet type</label>
+            <select id="cfPetType" name="petType"></select>
+          </div>
+          <div class="form-row">
+            <label for="cfPetName">Pet's name</label>
+            <input type="text" id="cfPetName" name="petName">
+          </div>
+          <div class="form-row">
+            <label for="cfService">Service interested in</label>
+            <select id="cfService" name="service"></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="cfMessage">Anything we should know?</label>
+          <textarea id="cfMessage" name="message" rows="4" placeholder="Preferred dates, temperament notes, allergies…" required></textarea>
+          <span class="field-error" id="cfMessageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send enquiry</button>
+        <p class="form-success" id="contactSuccess" hidden>Thanks — your enquiry has been sent. We usually reply within one business day.</p>
+      </form>
+    </section>
+
+    <section class="section section-tint">
+      <div class="section-head">
+        <p class="eyebrow">Before you ask</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </section>
+  </section>
+
+</main>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">JnL<span class="logo-dot">.</span></span>
+      <p id="footerTagline"></p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h3>Site</h3>
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </div>
+      <div>
+        <h3>Reach us</h3>
+        <span id="footerEmail"></span>
+        <span id="footerPhone"></span>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">© <span id="footerYear"></span> JnL Pet Studio.</p>
+</footer>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
